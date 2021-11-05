@@ -1,4 +1,5 @@
-<h1><%= @article.title %></h1>
+<div align="center" class="p-5">
+<h1><%= @article.title %></h1><br>
 <p><%= @article.content %></p>
 
 <br>
@@ -9,3 +10,4 @@
             article_path(@article),
             method: :delete,
             data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-lg m-2 p-3" %>
+</div>

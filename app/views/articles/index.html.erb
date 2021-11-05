@@ -1,10 +1,16 @@
-<h1>Street Fighters</h1>
-<div>
-<ul>
+<nav class="navbar navbar-light bg-light justify-content-between">
+  <h1 class="font-weight-normal m-3">Street Fighters</h1>
+  <form class="form-inline">
+    <%= link_to "Add a Street Fighter", new_article_path, class: "btn btn-info p-3 m-2 btn-lg" %>
+  </form>
+</nav>
+
+<div id="change">
+<ul class="list-group d-flex">
 <% @articles.each do |article| %>
-<li><%= link_to article.title, article_path(article) %></li>
+<li><%= link_to article.title, article_path(article), class:"list-group-item d-flex justify-content-center border-1" %></li>
 <% end %>
 </ul>
 </div>
 
-<%= link_to "Add a Street Fighter", new_article_path, class: "btn btn-info p-3 m-2" %>
+

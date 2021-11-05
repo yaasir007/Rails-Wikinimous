@@ -1,12 +1,17 @@
+<div align="center" class="p-5">
+
 <h1>Edit the Article - <%= @article.title %></h1>
+ <br>
 <%= form_for(@article) do |f| %>
-  <%= f.label :Title %>
-  <%= f.text_field :title %>
-  <%= f.label :Content %>
-  <%= f.text_field :content %>
-  <%= f.submit %>
+  <%= f.label :Title %>  <br>
+  <%= f.text_field :title %> <br><br>
+  <%= f.label :Content %>  <br>
+  <%= f.text_area :content %>  <br><br>
+  <%= f.submit class:"btn btn-success btn-lg" %>
 <% end %>
 
 <br>
 
 <%= link_to 'Back', article_path(@article), class: "btn btn-secondary btn-lg btn-block  p-3 m-2" %>
+
+</div>
